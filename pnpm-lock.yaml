@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@playwright/test': 1.22.2
+  '@playwright/test': 1.23.0
   '@sveltejs/adapter-auto': next
   '@sveltejs/kit': next
   '@tailwindcss/typography': 0.5.2
@@ -27,7 +27,7 @@ specifiers:
   typescript: 4.7.4
 
 devDependencies:
-  '@playwright/test': 1.22.2
+  '@playwright/test': 1.23.0
   '@sveltejs/adapter-auto': 1.0.0-next.52
   '@sveltejs/kit': 1.0.0-next.355_svelte@3.48.0
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.4
@@ -153,13 +153,13 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@playwright/test/1.22.2:
-    resolution: {integrity: sha512-cCl96BEBGPtptFz7C2FOSN3PrTnJ3rPpENe+gYCMx4GNNDlN4tmo2D89y13feGKTMMAIVrXfSQ/UmaQKLy1XLA==}
+  /@playwright/test/1.23.0:
+    resolution: {integrity: sha512-RPWI8AHBVBiDyfTuxi1BhOaY3yaVy3S5ZsGKkSGGeWpZtSgN4SerInCYvgh9+EunIAK4RJQo+bzupbAn5pVqHQ==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
       '@types/node': 17.0.21
-      playwright-core: 1.22.2
+      playwright-core: 1.23.0
     dev: true
 
   /@rollup/pluginutils/4.2.1:
@@ -1912,8 +1912,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /playwright-core/1.22.2:
-    resolution: {integrity: sha512-w/hc/Ld0RM4pmsNeE6aL/fPNWw8BWit2tg+TfqJ3+p59c6s3B6C8mXvXrIPmfQEobkcFDc+4KirNzOQ+uBSP1Q==}
+  /playwright-core/1.23.0:
+    resolution: {integrity: sha512-Zzhyr5RZGoJ1ek2sgfJCt2076kdOg8hnNwFBqAYeLySiutXyxSQk93vZ5gbnFiWV1sHvueCcwla9n35acUTxtA==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
