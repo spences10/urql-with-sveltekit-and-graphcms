@@ -7,7 +7,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.2
   '@typescript-eslint/eslint-plugin': 5.30.5
   '@typescript-eslint/parser': 5.30.5
-  '@urql/svelte': 1.3.3
+  '@urql/svelte': 2.0.2
   autoprefixer: 10.4.7
   daisyui: 2.18.0
   eslint: 8.19.0
@@ -34,7 +34,7 @@ devDependencies:
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.4
   '@typescript-eslint/eslint-plugin': 5.30.5_6zdoc3rn4mpiddqwhppni2mnnm
   '@typescript-eslint/parser': 5.30.5_4x5o4skxv6sl53vpwefgt23khm
-  '@urql/svelte': 1.3.3_mmjoe2h32ibvibxzqk6q2szkne
+  '@urql/svelte': 2.0.2_mmjoe2h32ibvibxzqk6q2szkne
   autoprefixer: 10.4.7_postcss@8.4.14
   daisyui: 2.18.0_ugi4xkrfysqkt4c4y6hkyfj344
   eslint: 8.19.0
@@ -405,8 +405,8 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@urql/core/2.4.3_graphql@16.5.0:
-    resolution: {integrity: sha512-FpapxUKF0nLdzRLoB1QsudDjeLXJhBwzkzl8bSOJ6Cnj7LRRKJ+dYdqHfqGykswB/ILrkZks2Isp4a4BhqyUow==}
+  /@urql/core/2.6.0_graphql@16.5.0:
+    resolution: {integrity: sha512-JuIbzDu2oASSe+m5u410ceqWQGTF6QK5W/UZaHuzQX+I2wX4aVdPN/NeZnaFFqG3UYw3+ttFHpQK0vrsU6QLFw==}
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
@@ -415,13 +415,13 @@ packages:
       wonka: 4.0.15
     dev: true
 
-  /@urql/svelte/1.3.3_mmjoe2h32ibvibxzqk6q2szkne:
-    resolution: {integrity: sha512-5XbKcEfvMBYrQfuKjCzLgcT46XW4RoVTeOM5VPmAwk7mD709kgL8LXOSF/9A+fTLOByncMxKTp/9lkI8HKCBkA==}
+  /@urql/svelte/2.0.2_mmjoe2h32ibvibxzqk6q2szkne:
+    resolution: {integrity: sha512-b/gLJGZK78GHbyKgraEZ09uHcGc4n0RePSIAPhj+sMTnIgRRaMQwU4D88dNruUdU363MCxFmy+d+V3FYNxmgNQ==}
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
       svelte: ^3.0.0
     dependencies:
-      '@urql/core': 2.4.3_graphql@16.5.0
+      '@urql/core': 2.6.0_graphql@16.5.0
       graphql: 16.5.0
       svelte: 3.49.0
       wonka: 4.0.15
@@ -1503,7 +1503,7 @@ packages:
     dev: true
 
   /is-extglob/2.1.1:
-    resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=}
+    resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
     dev: true
 
