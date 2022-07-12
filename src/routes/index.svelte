@@ -1,30 +1,31 @@
 <script>
   // urql initialization
-  import { gql, operationStore, query } from '@urql/svelte'
-  const postsQuery = gql`
-    query Posts {
-      posts {
-        title
-        slug
-        date
-        excerpt
-        tags
-        coverImage {
-          url(
-            transformation: {
-              image: { resize: { fit: clip, width: 600 } }
-            }
-          )
-        }
-        content {
-          html
+  import { getContextClient, gql, queryStore } from '@urql/svelte'
+
+  const posts = queryStore({
+    client: getContextClient(),
+    query: gql`
+      query Posts {
+        posts {
+          title
+          slug
+          date
+          excerpt
+          tags
+          coverImage {
+            url(
+              transformation: {
+                image: { resize: { fit: clip, width: 600 } }
+              }
+            )
+          }
+          content {
+            html
+          }
         }
       }
-    }
-  `
-  // request policy is cache-first (default)
-  const posts = operationStore(postsQuery)
-  query(posts)
+    `,
+  })
 </script>
 
 {#if $posts.fetching}

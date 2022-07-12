@@ -7,38 +7,40 @@
 
 <script>
   export let slug
-  import { gql, operationStore, query } from '@urql/svelte'
-  const postQuery = gql`
-    query GetPost($slug: String!) {
-      post(where: { slug: $slug }) {
-        title
-        excerpt
-        date
-        tags
-        author {
-          name
-          authorTitle: title
-          picture {
-            url(
-              transformation: {
-                image: {
-                  resize: { fit: clip, height: 50, width: 50 }
+  import { getContextClient, gql, queryStore } from '@urql/svelte'
+  const post = queryStore({
+    client: getContextClient(),
+    variables: { slug },
+    query: gql`
+      query GetPost($slug: String!) {
+        post(where: { slug: $slug }) {
+          title
+          excerpt
+          date
+          tags
+          author {
+            name
+            authorTitle: title
+            picture {
+              url(
+                transformation: {
+                  image: {
+                    resize: { fit: clip, height: 50, width: 50 }
+                  }
                 }
-              }
-            )
+              )
+            }
+          }
+          content {
+            html
+          }
+          coverImage {
+            url
           }
         }
-        content {
-          html
-        }
-        coverImage {
-          url
-        }
       }
-    }
-  `
-  const post = operationStore(postQuery, { slug })
-  query(post)
+    `,
+  })
 </script>
 
 <svelte:head>

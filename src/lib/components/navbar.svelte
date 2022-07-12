@@ -1,20 +1,21 @@
 <script lang="ts">
-  import { gql, operationStore, query } from '@urql/svelte'
+  import { getContextClient, gql, queryStore } from '@urql/svelte'
   import ThemeSelect from './theme-select.svelte'
 
-  const pagesQuery = gql`
-    query AllPages {
-      pages {
-        title
-        slug
-        content {
-          html
+  const pages = queryStore({
+    client: getContextClient(),
+    query: gql`
+      query AllPages {
+        pages {
+          title
+          slug
+          content {
+            html
+          }
         }
       }
-    }
-  `
-  const pages = operationStore(pagesQuery)
-  query(pages)
+    `,
+  })
 </script>
 
 <div class="navbar mb-10 shadow-lg bg-neutral text-neutral-content">

@@ -7,19 +7,22 @@
 
 <script lang="ts">
   export let slug
-  import { gql, operationStore, query } from '@urql/svelte'
-  const pageQuery = gql`
-    query GetPage($slug: String!) {
-      page(where: { slug: $slug }) {
-        title
-        content {
-          html
+  import { getContextClient, gql, queryStore } from '@urql/svelte'
+  
+  const page = queryStore({
+    client: getContextClient(),
+    variables: { slug },
+    query: gql`
+      query GetPage($slug: String!) {
+        page(where: { slug: $slug }) {
+          title
+          content {
+            html
+          }
         }
       }
-    }
-  `
-  const page = operationStore(pageQuery, { slug })
-  query(page)
+    `,
+  })
 </script>
 
 <svelte:head>

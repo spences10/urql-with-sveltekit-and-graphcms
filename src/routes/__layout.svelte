@@ -1,7 +1,7 @@
 <script lang="ts">
   import Footer from '$lib/components/footer.svelte'
   import Navbar from '$lib/components/navbar.svelte'
-  import { createClient, setClient } from '@urql/svelte'
+  import { createClient, setContextClient } from '@urql/svelte'
   import { onMount } from 'svelte'
   import { themeChange } from 'theme-change'
   import '../app.css'
@@ -18,7 +18,7 @@
       }
     },
   })
-  setClient(client)
+  setContextClient(client)
 
   onMount(() => {
     themeChange(false)
