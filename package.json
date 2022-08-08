@@ -23,7 +23,7 @@
     "@urql/svelte": "2.0.2",
     "autoprefixer": "10.4.8",
     "daisyui": "2.22.0",
-    "eslint": "8.20.0",
+    "eslint": "8.21.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-svelte3": "4.0.0",
     "graphql": "16.5.0",
