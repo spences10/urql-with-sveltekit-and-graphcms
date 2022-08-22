@@ -1,12 +1,7 @@
-<script context="module">
-  export const load = async ({ params }) => {
-    const { slug } = params
-    return { props: { slug } }
-  }
-</script>
-
 <script>
-  export let slug
+  export let data
+  let { slug } = data
+
   import { getContextClient, gql, queryStore } from '@urql/svelte'
   const post = queryStore({
     client: getContextClient(),
