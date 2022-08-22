@@ -19,7 +19,7 @@
     "@sveltejs/kit": "next",
     "@tailwindcss/typography": "0.5.4",
     "@typescript-eslint/eslint-plugin": "5.34.0",
-    "@typescript-eslint/parser": "5.34.0",
+    "@typescript-eslint/parser": "5.33.1",
     "@urql/svelte": "2.0.2",
     "autoprefixer": "10.4.8",
     "daisyui": "2.24.0",
